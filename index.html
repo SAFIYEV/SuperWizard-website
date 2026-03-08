@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuperWizard — Browser AI Agent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+SC:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <canvas id="particles"></canvas>
+  <div class="scroll-progress" id="progress"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <span>SuperWizard</span>
+    </div>
+
+    <nav>
+      <a href="#hero" data-i18n="nav_home">Home</a>
+      <a href="#engine" data-i18n="nav_engine">Engine</a>
+      <a href="#scenes" data-i18n="nav_scenarios">Scenarios</a>
+      <a href="#founder" data-i18n="nav_founder">Founder</a>
+      <a href="#cta" data-i18n="nav_launch">Launch</a>
+    </nav>
+
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ru">RU</button>
+      <button class="lang-btn" data-lang="zh">中文</button>
+    </div>
+    <button class="glow-btn" data-scroll="#cta" data-i18n="btn_demo">Request demo</button>
+  </header>
+
+  <main>
+    <section class="scene hero" id="hero">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+      <div class="content">
+        <p class="eyebrow" data-i18n="hero_eyebrow">AI Agent for Browser Automation</p>
+        <h1 data-i18n="hero_title">SuperWizard executes tasks,<br>not just replies</h1>
+        <p class="lead" data-i18n="hero_lead">
+          A browser-native AI agent that reads full page context, understands DOM and console signals,
+          and completes actions step-by-step until outcome.
+        </p>
+        <div class="headline-rotator">
+          <span class="rotator-word active" data-i18n="rotator_1">Decides</span>
+          <span class="rotator-dot">•</span>
+          <span class="rotator-word" data-i18n="rotator_2">Acts</span>
+          <span class="rotator-dot">•</span>
+          <span class="rotator-word" data-i18n="rotator_3">Delivers</span>
+        </div>
+        <div class="cta-row">
+          <button class="glow-btn" data-scroll="#engine" data-i18n="btn_how">See how it works</button>
+          <button class="ghost-btn" data-scroll="#scenes" data-i18n="btn_scenarios">Interactive scenarios</button>
+        </div>
+      </div>
+      <div class="hero-ui">
+        <div class="panel">
+          <div class="panel-head"><span></span><span></span><span></span></div>
+          <div class="terminal" id="terminal"></div>
+        </div>
+        <div class="mini-kpis">
+          <div class="kpi"><p data-i18n="kpi_1_l">Automation loops</p><h4>24</h4></div>
+          <div class="kpi"><p data-i18n="kpi_2_l">Context depth</p><h4>26K+</h4></div>
+          <div class="kpi"><p data-i18n="kpi_3_l">Domains</p><h4>Any</h4></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene engine" id="engine">
+      <div class="section-title">
+        <p data-i18n="engine_eyebrow">Core system</p>
+        <h2 class="animated-headline" data-i18n="engine_title">Full context before each action</h2>
+      </div>
+      <div class="engine-grid">
+        <article class="card tilt">
+          <h3>Page + DOM Scan</h3>
+          <p data-i18n="card_1">Scans content, forms, actions and current UI state before making a move.</p>
+        </article>
+        <article class="card tilt">
+          <h3>Console Intelligence</h3>
+          <p data-i18n="card_2">Reads errors and warnings to avoid repeating broken steps.</p>
+        </article>
+        <article class="card tilt">
+          <h3>Retry + Recovery</h3>
+          <p data-i18n="card_3">Auto-retries with alternative selectors and recovery actions.</p>
+        </article>
+        <article class="card tilt">
+          <h3>Domain Focus</h3>
+          <p data-i18n="card_4">If user specifies a site, the agent remains on that domain.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="scene scenes" id="scenes">
+      <div class="section-title">
+        <p data-i18n="scenes_eyebrow">Use cases</p>
+        <h2 class="animated-headline" data-i18n="scenes_title">Scene-based experience, not a plain long page</h2>
+      </div>
+      <div class="tabs">
+        <button class="tab active" data-tab="0" data-i18n="tab_1">Research</button>
+        <button class="tab" data-tab="1" data-i18n="tab_2">Shopping</button>
+        <button class="tab" data-tab="2" data-i18n="tab_3">Autopilot</button>
+      </div>
+      <div class="stage">
+        <article class="story active">
+          <h3 data-i18n="story_1_t">Deep web analysis</h3>
+          <p data-i18n="story_1_p">SuperWizard filters noise, picks useful sources and returns actionable output.</p>
+        </article>
+        <article class="story">
+          <h3 data-i18n="story_2_t">Smart product flow</h3>
+          <p data-i18n="story_2_p">Compares options across the internet and opens relevant product pages.</p>
+        </article>
+        <article class="story">
+          <h3 data-i18n="story_3_t">Step-by-step automation</h3>
+          <p data-i18n="story_3_p">Forms, onboarding, repetitive browser tasks — done with retries and checks.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="scene founder" id="founder">
+      <div class="section-title">
+        <p data-i18n="founder_eyebrow">Founder</p>
+        <h2 class="animated-headline" data-i18n="founder_title">Built by Safiev Marat</h2>
+      </div>
+      <div class="founder-wrap">
+        <div class="founder-photo tilt">
+          <img src="./photo.png" alt="Safiev Marat">
+        </div>
+        <article class="founder-card">
+          <h3 data-i18n="founder_name">Safiev Marat — Founder</h3>
+          <p data-i18n="founder_text_1">
+            Founder of AI Lumiere. Building practical AI products with strong execution focus.
+          </p>
+          <p data-i18n="founder_text_2">
+            Leader of Web3 community: Web3 Frens CA.
+          </p>
+          <div class="founder-tags">
+            <span>AI Lumiere</span>
+            <span>Web3 Frens CA</span>
+            <span>SuperWizard</span>
+          </div>
+          <div class="founder-social">
+            <a href="https://x.com/SafiyevMarat" target="_blank" rel="noopener noreferrer" aria-label="X (ex Twitter)" title="X (ex Twitter)">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18.9 2h3.4l-7.4 8.4L23.6 22h-6.8l-5.3-6.9L5.3 22H1.9l7.9-9L1.4 2h6.9l4.8 6.3L18.9 2zm-1.2 18h1.9L7.2 3.9H5.2L17.7 20z"/>
+              </svg>
+            </a>
+            <a href="https://instagram.com/maratsafiyev19/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.8A5.2 5.2 0 1 1 6.8 13 5.2 5.2 0 0 1 12 7.8zm0 2A3.2 3.2 0 1 0 15.2 13 3.2 3.2 0 0 0 12 9.8zM18 6.3a1.2 1.2 0 1 1-1.2 1.2A1.2 1.2 0 0 1 18 6.3z"/>
+              </svg>
+            </a>
+            <a href="https://t.me/minudefi" target="_blank" rel="noopener noreferrer" aria-label="Telegram channel" title="Telegram channel">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21.5 4.6a1 1 0 0 0-1.1-.1L2.8 11.3a1 1 0 0 0 .1 1.9l4.5 1.5 1.7 5.3a1 1 0 0 0 1.8.3l2.5-3.4 4.2 3.1a1 1 0 0 0 1.6-.6l2.5-13.8a1 1 0 0 0-.2-1zM9.3 14.2l8.5-6.7-6.9 8.2-.8 2.5-.8-3.1z"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="scene cta" id="cta">
+      <div class="ring"></div>
+      <div class="content">
+        <p class="eyebrow">SuperWizard</p>
+        <h2 class="animated-headline" data-i18n="cta_title">Ready to launch</h2>
+        <p class="lead" data-i18n="cta_text">
+          A founder-controlled platform: own your logic, quality, roadmap and iteration speed.
+        </p>
+        <div class="cta-row">
+          <button class="glow-btn pulse" data-i18n="cta_btn_run">Launch SuperWizard</button>
+          <button class="ghost-btn" data-scroll="#hero" data-i18n="cta_btn_top">Back to top</button>
+        </div>
+        <p class="support-line" data-i18n="support_line">Powered by AI Lumiere.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="https://t.me/AILumiere_news" target="_blank" rel="noopener noreferrer" data-i18n="footer_ai_lumiere">
+      AI Lumiere Telegram channel
+    </a>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
