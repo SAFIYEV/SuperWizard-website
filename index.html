@@ -169,6 +169,7 @@
     <section class="scene cta" id="cta">
       <div class="ring"></div>
       <div class="content">
+        <div class="cta-scan" aria-hidden="true"></div>
         <p class="eyebrow">SuperWizard</p>
         <h2 class="animated-headline" data-i18n="cta_title">Ready to launch</h2>
         <p class="lead" data-i18n="cta_text">
@@ -179,14 +180,33 @@
           <button class="ghost-btn" data-scroll="#hero" data-i18n="cta_btn_top">Back to top</button>
         </div>
         <p class="support-line" data-i18n="support_line">Powered by AI Lumiere.</p>
+        <div class="cta-stats">
+          <article class="cta-stat" style="--delay: 0ms;">
+            <p data-i18n="cta_stat_1">Automated flows</p>
+            <h4 data-count="120">0</h4>
+          </article>
+          <article class="cta-stat" style="--delay: 120ms;">
+            <p data-i18n="cta_stat_2">Sources analyzed</p>
+            <h4 data-count="100">0</h4>
+          </article>
+          <article class="cta-stat" style="--delay: 240ms;">
+            <p data-i18n="cta_stat_3">Avg. setup time (sec)</p>
+            <h4 data-count="10">0</h4>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <a href="https://t.me/AILumiere_news" target="_blank" rel="noopener noreferrer" data-i18n="footer_ai_lumiere">
-      AI Lumiere Telegram channel
-    </a>
+    <div class="footer-inner">
+      <a href="https://t.me/AILumiere_news" target="_blank" rel="noopener noreferrer" data-i18n="footer_ai_lumiere">
+        AI Lumiere Telegram channel
+      </a>
+      <a href="mailto:admin@superwizard.org" data-i18n="footer_email">
+        Contact: admin@superwizard.org
+      </a>
+    </div>
   </footer>
 
   <script src="./script.js"></script>

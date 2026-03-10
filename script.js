@@ -87,7 +87,11 @@ const i18n = {
     cta_btn_run: 'Launch SuperWizard',
     cta_btn_top: 'Back to top',
     support_line: 'Powered by AI Lumiere.',
-    footer_ai_lumiere: 'AI Lumiere Telegram channel'
+    cta_stat_1: 'Automated flows',
+    cta_stat_2: 'Sources analyzed',
+    cta_stat_3: 'Avg. setup time (sec)',
+    footer_ai_lumiere: 'AI Lumiere Telegram channel',
+    footer_email: 'Contact: admin@superwizard.org'
   },
   ru: {
     nav_home: 'Главная',
@@ -134,7 +138,11 @@ const i18n = {
     cta_btn_run: 'Запустить SuperWizard',
     cta_btn_top: 'Наверх',
     support_line: 'Powered by AI Lumiere.',
-    footer_ai_lumiere: 'Telegram-канал AI Lumiere'
+    cta_stat_1: 'Автоматизированные флоу',
+    cta_stat_2: 'Проанализировано источников',
+    cta_stat_3: 'Среднее время запуска (сек)',
+    footer_ai_lumiere: 'Telegram-канал AI Lumiere',
+    footer_email: 'Почта: admin@superwizard.org'
   },
   zh: {
     nav_home: '首页',
@@ -181,7 +189,11 @@ const i18n = {
     cta_btn_run: '启动 SuperWizard',
     cta_btn_top: '返回顶部',
     support_line: 'Powered by AI Lumiere.',
-    footer_ai_lumiere: 'AI Lumiere Telegram 频道'
+    cta_stat_1: '自动化流程',
+    cta_stat_2: '已分析来源',
+    cta_stat_3: '平均启动时间（秒）',
+    footer_ai_lumiere: 'AI Lumiere Telegram 频道',
+    footer_email: '联系邮箱: admin@superwizard.org'
   }
 };
 
@@ -409,6 +421,44 @@ function initTopbarDynamics() {
   window.addEventListener('scroll', onScroll, { passive: true });
 }
 
+function initCtaDynamics() {
+  const cta = document.getElementById('cta');
+  if (!cta) return;
+  const statEls = Array.from(cta.querySelectorAll('[data-count]'));
+  let hasAnimated = false;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const animateCounter = (el, target) => {
+    if (reduceMotion) {
+      el.textContent = String(target);
+      return;
+    }
+    const duration = 1300;
+    const start = performance.now();
+    const from = 0;
+    const tick = (now) => {
+      const p = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = String(Math.round(from + (target - from) * eased));
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting || hasAnimated) return;
+      hasAnimated = true;
+      cta.classList.add('live');
+      statEls.forEach((el) => {
+        const target = Number(el.dataset.count || 0);
+        animateCounter(el, target);
+      });
+    });
+  }, { threshold: 0.35 });
+  observer.observe(cta);
+}
+
 typeTerminal();
 initParticles();
 initReveal();
@@ -420,3 +470,4 @@ initRotator();
 initLanguageSwitch();
 initScrollProgress();
 initTopbarDynamics();
+initCtaDynamics();
