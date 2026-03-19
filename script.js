@@ -86,12 +86,12 @@ const i18n = {
     cta_text: 'A founder-controlled platform: own your logic, quality, roadmap and iteration speed.',
     cta_btn_run: 'Launch SuperWizard',
     cta_btn_top: 'Back to top',
-    support_line: 'Powered by AI Lumiere.',
+    support_line: 'Powered by <a href="https://t.me/AILumiere_news" target="_blank" rel="noopener noreferrer">AI Lumiere</a>.',
     cta_stat_1: 'Automated flows',
     cta_stat_2: 'Sources analyzed',
     cta_stat_3: 'Avg. setup time (sec)',
-    footer_ai_lumiere: 'AI Lumiere Telegram channel',
-    footer_email: 'Contact: admin@superwizard.org'
+    footer_subtitle: 'Follow SuperWizard on social media',
+    footer_contact: 'For questions, email us at <a href="mailto:admin@superwizard.org">admin@superwizard.org</a>'
   },
   ru: {
     nav_home: 'Главная',
@@ -137,12 +137,12 @@ const i18n = {
     cta_text: 'Платформа под контролем фаундера: своя логика, качество, роадмап и скорость итераций.',
     cta_btn_run: 'Запустить SuperWizard',
     cta_btn_top: 'Наверх',
-    support_line: 'Powered by AI Lumiere.',
+    support_line: 'При поддержке <a href="https://t.me/AILumiere_news" target="_blank" rel="noopener noreferrer">AI Lumiere</a>.',
     cta_stat_1: 'Автоматизированные флоу',
     cta_stat_2: 'Проанализировано источников',
     cta_stat_3: 'Среднее время запуска (сек)',
-    footer_ai_lumiere: 'Telegram-канал AI Lumiere',
-    footer_email: 'Почта: admin@superwizard.org'
+    footer_subtitle: 'Следите за SuperWizard в соцсетях',
+    footer_contact: 'По вопросам писать: <a href="mailto:admin@superwizard.org">admin@superwizard.org</a>'
   },
   zh: {
     nav_home: '首页',
@@ -188,12 +188,12 @@ const i18n = {
     cta_text: '由创始人掌控的平台：逻辑、质量、路线图与迭代速度都可控。',
     cta_btn_run: '启动 SuperWizard',
     cta_btn_top: '返回顶部',
-    support_line: 'Powered by AI Lumiere.',
+    support_line: '由 <a href="https://t.me/AILumiere_news" target="_blank" rel="noopener noreferrer">AI Lumiere</a> 提供支持。',
     cta_stat_1: '自动化流程',
     cta_stat_2: '已分析来源',
     cta_stat_3: '平均启动时间（秒）',
-    footer_ai_lumiere: 'AI Lumiere Telegram 频道',
-    footer_email: '联系邮箱: admin@superwizard.org'
+    footer_subtitle: '在社交媒体关注 SuperWizard',
+    footer_contact: '如有问题，请发送邮件至 <a href="mailto:admin@superwizard.org">admin@superwizard.org</a>'
   }
 };
 

@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SuperWizard — Browser AI Agent</title>
+  <link rel="icon" type="image/jpeg" href="./image.jpg">
+  <link rel="apple-touch-icon" href="./image.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+SC:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -16,7 +18,7 @@
 
   <header class="topbar">
     <div class="brand">
-      <span class="dot"></span>
+      <img src="./image.jpg" alt="SuperWizard logo" class="brand-logo">
       <span>SuperWizard</span>
     </div>
 
@@ -179,7 +181,9 @@
           <button class="glow-btn pulse" data-i18n="cta_btn_run">Launch SuperWizard</button>
           <button class="ghost-btn" data-scroll="#hero" data-i18n="cta_btn_top">Back to top</button>
         </div>
-        <p class="support-line" data-i18n="support_line">Powered by AI Lumiere.</p>
+        <p class="support-line" data-i18n="support_line">
+          Powered by <a href="https://t.me/AILumiere_news" target="_blank" rel="noopener noreferrer">AI Lumiere</a>.
+        </p>
         <div class="cta-stats">
           <article class="cta-stat" style="--delay: 0ms;">
             <p data-i18n="cta_stat_1">Automated flows</p>
@@ -200,13 +204,43 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <a href="https://t.me/AILumiere_news" target="_blank" rel="noopener noreferrer" data-i18n="footer_ai_lumiere">
-        AI Lumiere Telegram channel
-      </a>
-      <a href="mailto:admin@superwizard.org" data-i18n="footer_email">
-        Contact: admin@superwizard.org
-      </a>
+      <div class="footer-brand">
+        <img src="./image.jpg" alt="SuperWizard logo" class="footer-logo">
+        <div>
+          <p class="footer-title">SuperWizard</p>
+          <p class="footer-subtitle" data-i18n="footer_subtitle">Follow SuperWizard on social media</p>
+        </div>
+      </div>
+      <div class="footer-social" aria-label="SuperWizard social links">
+        <a href="https://t.me/superwizard_ai" target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21.5 4.6a1 1 0 0 0-1.1-.1L2.8 11.3a1 1 0 0 0 .1 1.9l4.5 1.5 1.7 5.3a1 1 0 0 0 1.8.3l2.5-3.4 4.2 3.1a1 1 0 0 0 1.6-.6l2.5-13.8a1 1 0 0 0-.2-1zM9.3 14.2l8.5-6.7-6.9 8.2-.8 2.5-.8-3.1z"/>
+          </svg>
+          <span>Telegram</span>
+        </a>
+        <a href="https://x.com/superwizard_ai" target="_blank" rel="noopener noreferrer" aria-label="X" title="X">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18.9 2h3.4l-7.4 8.4L23.6 22h-6.8l-5.3-6.9L5.3 22H1.9l7.9-9L1.4 2h6.9l4.8 6.3L18.9 2zm-1.2 18h1.9L7.2 3.9H5.2L17.7 20z"/>
+          </svg>
+          <span>X</span>
+        </a>
+        <a href="https://www.instagram.com/super.wizard19/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.8A5.2 5.2 0 1 1 6.8 13 5.2 5.2 0 0 1 12 7.8zm0 2A3.2 3.2 0 1 0 15.2 13 3.2 3.2 0 0 0 12 9.8zM18 6.3a1.2 1.2 0 1 1-1.2 1.2A1.2 1.2 0 0 1 18 6.3z"/>
+          </svg>
+          <span>Instagram</span>
+        </a>
+        <a href="https://www.threads.com/@super.wizard19?xmt=AQF0ELFVd8QzhtJXIkv4QuPadq3Bl16BaOq7mmpWHL6th4w" target="_blank" rel="noopener noreferrer" aria-label="Threads" title="Threads">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2.2a9.8 9.8 0 1 0 0 19.6 9.8 9.8 0 0 0 0-19.6zm4.7 10.6c-.3 2.3-1.9 3.8-4.5 3.8-2.4 0-4.2-1.4-4.4-3.8h2.1c.2 1.3 1 2 2.3 2 1.4 0 2.2-.8 2.4-2.1.2-1.2-.4-2.2-1.8-2.5-.5-.1-1-.1-1.6-.1V8.4c.5 0 1 0 1.4-.1 1.1-.2 1.7-.9 1.6-1.9-.1-1-.8-1.6-1.9-1.6-1.2 0-2 .7-2.1 1.9H8.1c.2-2.3 1.8-3.7 4.2-3.7 2.4 0 4 1.4 4.1 3.5.1 1.3-.5 2.3-1.7 2.9 1.6.5 2.3 1.7 2 3.4z"/>
+          </svg>
+          <span>Threads</span>
+        </a>
+      </div>
     </div>
+    <p class="footer-contact" data-i18n="footer_contact">
+      For questions, email us at <a href="mailto:admin@superwizard.org">admin@superwizard.org</a>
+    </p>
   </footer>
 
   <script src="./script.js"></script>
