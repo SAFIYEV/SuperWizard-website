@@ -50,6 +50,7 @@ const i18n = {
     nav_about: 'About',
     nav_founder: 'Founder',
     nav_launch: 'Launch',
+    nav_menu: 'Menu',
     btn_demo: 'Request demo',
     hero_eyebrow: 'AI Agent for Browser Automation',
     hero_title: 'SuperWizard executes tasks,<br>not just replies',
@@ -115,6 +116,7 @@ const i18n = {
     nav_about: 'О компании',
     nav_founder: 'Фаундер',
     nav_launch: 'Запуск',
+    nav_menu: 'Меню',
     btn_demo: 'Запросить демо',
     hero_eyebrow: 'AI-агент для автоматизации браузера',
     hero_title: 'SuperWizard делает действия,<br>а не просто отвечает',
@@ -180,6 +182,7 @@ const i18n = {
     nav_about: '关于',
     nav_founder: '创始人',
     nav_launch: '启动',
+    nav_menu: '菜单',
     btn_demo: '申请演示',
     hero_eyebrow: '浏览器自动化 AI 智能体',
     hero_title: 'SuperWizard 执行任务，<br>不只是回复',
@@ -253,6 +256,8 @@ function applyLanguage(lang) {
   const next = document.querySelector('.carousel-next');
   if (prev && dict.carousel_prev) prev.setAttribute('aria-label', dict.carousel_prev);
   if (next && dict.carousel_next) next.setAttribute('aria-label', dict.carousel_next);
+  const navToggle = document.getElementById('nav-toggle');
+  if (navToggle && dict.nav_menu) navToggle.setAttribute('aria-label', dict.nav_menu);
 }
 
 function initParticles() {
@@ -350,7 +355,41 @@ function initSectionTransitions() {
   document.querySelectorAll('main section[id]').forEach((s) => sectionObserver.observe(s));
 }
 
+function initNavToggle() {
+  const toggle = document.getElementById('nav-toggle');
+  const nav = document.getElementById('site-nav');
+  const backdrop = document.getElementById('nav-backdrop');
+  if (!toggle || !nav) return;
+
+  const setOpen = (open) => {
+    nav.classList.toggle('is-open', open);
+    backdrop?.classList.toggle('is-open', open);
+    document.body.classList.toggle('nav-open', open);
+    document.querySelector('.topbar')?.classList.toggle('nav-open', open);
+    toggle.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (backdrop) backdrop.setAttribute('aria-hidden', open ? 'false' : 'true');
+  };
+
+  const close = () => setOpen(false);
+
+  toggle.addEventListener('click', () => {
+    setOpen(!nav.classList.contains('is-open'));
+  });
+  backdrop?.addEventListener('click', close);
+  nav.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', close);
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 980) close();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+}
+
 function initTilt() {
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
   document.querySelectorAll('.tilt').forEach((card) => {
     card.addEventListener('mousemove', (e) => {
       const r = card.getBoundingClientRect();
@@ -579,6 +618,7 @@ typeTerminal();
 initParticles();
 initReveal();
 initSectionTransitions();
+initNavToggle();
 initTilt();
 initTabs();
 initScrollButtons();
