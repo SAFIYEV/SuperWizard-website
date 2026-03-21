@@ -44,8 +44,10 @@ function typeTerminal() {
 const i18n = {
   en: {
     nav_home: 'Home',
+    nav_demos: 'Demos',
     nav_engine: 'Engine',
     nav_scenarios: 'Scenarios',
+    nav_about: 'About',
     nav_founder: 'Founder',
     nav_launch: 'Launch',
     btn_demo: 'Request demo',
@@ -82,6 +84,18 @@ const i18n = {
     founder_name: 'Safiev Marat — Founder',
     founder_text_1: 'Founder of AI Lumiere. Building practical AI products with strong execution focus.',
     founder_text_2: 'Leader of Web3 community: Web3 Frens CA.',
+    founder_text_3: 'Drives product strategy and engineering direction for SuperWizard: browser automation, reliable agent loops, and shipping customer-facing AI features through AI Lumiere.',
+    demos_eyebrow: 'Demos',
+    demos_title: 'See SuperWizard in the browser',
+    demo_desc_0: 'Research & news: SuperWizard collects and works through live web sources to deliver a concise brief.',
+    demo_desc_1: 'Tests & quizzes: the agent builds an interactive check you can run and export right in the browser.',
+    demo_desc_2: 'Multi-step flows: the agent fills in what&apos;s missing and drives the task to completion.',
+    carousel_prev: 'Previous video',
+    carousel_next: 'Next video',
+    about_eyebrow: 'Company',
+    about_title: 'About SuperWizard',
+    about_p1: 'SuperWizard is a product-led SaaS focused on browser-native AI automation: we ship the extension, own the roadmap, and iterate directly with early users rather than acting as a services agency.',
+    about_p3: 'Contact, security questions, and partnership inquiries are handled through the channels listed in the footer; the public site at superwizard.org is the primary reference for product scope and company context.',
     cta_title: 'Ready to launch',
     cta_text: 'A founder-controlled platform: own your logic, quality, roadmap and iteration speed.',
     cta_btn_run: 'Launch SuperWizard',
@@ -95,8 +109,10 @@ const i18n = {
   },
   ru: {
     nav_home: 'Главная',
+    nav_demos: 'Демо',
     nav_engine: 'Движок',
     nav_scenarios: 'Сценарии',
+    nav_about: 'О компании',
     nav_founder: 'Фаундер',
     nav_launch: 'Запуск',
     btn_demo: 'Запросить демо',
@@ -133,6 +149,18 @@ const i18n = {
     founder_name: 'Сафиев Марат — фаундер',
     founder_text_1: 'Основатель AI Lumiere. Строит практичные AI-продукты с фокусом на исполнение.',
     founder_text_2: 'Лидер web3 сообщества: Web3 Frens CA.',
+    founder_text_3: 'Отвечает за продуктовую стратегию и инженерное направление SuperWizard: автоматизация в браузере, устойчивые циклы агента и вывод AI-фич пользователям через AI Lumiere.',
+    demos_eyebrow: 'Демо',
+    demos_title: 'SuperWizard в браузере',
+    demo_desc_0: 'Исследования и новости: SuperWizard собирает и обрабатывает живые веб-источники и даёт краткий итог.',
+    demo_desc_1: 'Тесты и квизы: агент собирает интерактивную проверку, которую можно пройти и экспортировать в браузере.',
+    demo_desc_2: 'Многошаговые сценарии: агент закрывает пробелы и доводит задачу до результата.',
+    carousel_prev: 'Предыдущее видео',
+    carousel_next: 'Следующее видео',
+    about_eyebrow: 'Компания',
+    about_title: 'О SuperWizard',
+    about_p1: 'SuperWizard — product-led SaaS вокруг AI-автоматизации в браузере: мы ведём расширение, роадмап и итерации с ранними пользователями, а не работаем как агентство услуг.',
+    about_p3: 'Контакты, вопросы безопасности и партнёрства — через каналы в подвале сайта; публичный superwizard.org — основная точка правды по продукту и контексту компании.',
     cta_title: 'Готов к запуску',
     cta_text: 'Платформа под контролем фаундера: своя логика, качество, роадмап и скорость итераций.',
     cta_btn_run: 'Запустить SuperWizard',
@@ -146,8 +174,10 @@ const i18n = {
   },
   zh: {
     nav_home: '首页',
+    nav_demos: '演示',
     nav_engine: '引擎',
     nav_scenarios: '场景',
+    nav_about: '关于',
     nav_founder: '创始人',
     nav_launch: '启动',
     btn_demo: '申请演示',
@@ -184,6 +214,18 @@ const i18n = {
     founder_name: 'Safiev Marat — 创始人',
     founder_text_1: 'AI Lumiere 创始人，专注打造可落地的 AI 产品。',
     founder_text_2: 'Web3 社区 Web3 Frens CA 负责人。',
+    founder_text_3: '负责 SuperWizard 的产品战略与工程方向：浏览器自动化、可靠的智能体循环，以及通过 AI Lumiere 向用户交付 AI 功能。',
+    demos_eyebrow: '演示',
+    demos_title: '在浏览器中了解 SuperWizard',
+    demo_desc_0: '研究与资讯：SuperWizard 汇总并处理实时网页来源，输出精炼摘要。',
+    demo_desc_1: '测验与试卷：智能体在浏览器中生成交互式测验，可作答与导出。',
+    demo_desc_2: '多步流程：智能体补全缺失环节，将任务推进到完成。',
+    carousel_prev: '上一个视频',
+    carousel_next: '下一个视频',
+    about_eyebrow: '公司',
+    about_title: '关于 SuperWizard',
+    about_p1: 'SuperWizard 是以浏览器原生 AI 自动化为核心的产品型 SaaS：我们交付扩展、掌握路线图，并与早期用户直接迭代，而非作为外包服务机构。',
+    about_p3: '联系、安全与商务合作请通过页脚渠道；superwizard.org 是产品与公司的主要公开信息来源。',
     cta_title: '准备启动',
     cta_text: '由创始人掌控的平台：逻辑、质量、路线图与迭代速度都可控。',
     cta_btn_run: '启动 SuperWizard',
@@ -207,6 +249,10 @@ function applyLanguage(lang) {
   document.querySelectorAll('.lang-btn').forEach((btn) => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
+  const prev = document.querySelector('.carousel-prev');
+  const next = document.querySelector('.carousel-next');
+  if (prev && dict.carousel_prev) prev.setAttribute('aria-label', dict.carousel_prev);
+  if (next && dict.carousel_next) next.setAttribute('aria-label', dict.carousel_next);
 }
 
 function initParticles() {
@@ -276,7 +322,7 @@ function initReveal() {
     });
   }, { threshold: 0.14 });
 
-  document.querySelectorAll('.section-title, .card, .stage, .hero .content, .hero-ui, .cta .content, .kpi, .founder-photo, .founder-card, .tab')
+  document.querySelectorAll('.section-title, .card, .stage, .hero .content, .hero-ui, .cta .content, .kpi, .founder-photo, .founder-card, .tab, .video-carousel, .carousel-viewport, .carousel-desc-wrap, .about-card, .about-deco')
     .forEach((el) => {
       el.classList.add('reveal');
       observer.observe(el);
@@ -377,6 +423,76 @@ function initRotator() {
   }, 1400);
 }
 
+function initVideoCarousel() {
+  const track = document.getElementById('carousel-track');
+  const dotsWrap = document.getElementById('carousel-dots');
+  const prev = document.querySelector('.carousel-prev');
+  const next = document.querySelector('.carousel-next');
+  const videos = Array.from(document.querySelectorAll('.carousel-video'));
+  const descs = Array.from(document.querySelectorAll('.carousel-desc'));
+  const n = videos.length;
+  if (!track || !dotsWrap || n === 0 || !prev || !next) return;
+
+  let idx = 0;
+  let touchStartX = null;
+
+  function pauseAll() {
+    videos.forEach((v) => {
+      try {
+        v.pause();
+      } catch (_) {}
+    });
+  }
+
+  function updateDots() {
+    dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === idx);
+      d.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+    });
+  }
+
+  function updateDescs() {
+    descs.forEach((p, i) => p.classList.toggle('active', i === idx));
+  }
+
+  function go(i) {
+    idx = (i + n) % n;
+    track.style.transform = `translateX(-${idx * 100}%)`;
+    pauseAll();
+    updateDots();
+    updateDescs();
+  }
+
+  dotsWrap.innerHTML = '';
+  for (let i = 0; i < n; i += 1) {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = `carousel-dot${i === 0 ? ' active' : ''}`;
+    b.setAttribute('role', 'tab');
+    b.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+    b.setAttribute('aria-label', `Video ${i + 1}`);
+    b.addEventListener('click', () => go(i));
+    dotsWrap.appendChild(b);
+  }
+
+  prev.addEventListener('click', () => go(idx - 1));
+  next.addEventListener('click', () => go(idx + 1));
+
+  const viewport = document.querySelector('.carousel-viewport');
+  if (viewport) {
+    viewport.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    viewport.addEventListener('touchend', (e) => {
+      if (touchStartX == null) return;
+      const dx = e.changedTouches[0].screenX - touchStartX;
+      touchStartX = null;
+      if (dx > 56) go(idx - 1);
+      else if (dx < -56) go(idx + 1);
+    }, { passive: true });
+  }
+}
+
 function initLanguageSwitch() {
   const buttons = document.querySelectorAll('.lang-btn');
   buttons.forEach((btn) => {
@@ -468,6 +584,7 @@ initTabs();
 initScrollButtons();
 initRotator();
 initLanguageSwitch();
+initVideoCarousel();
 initScrollProgress();
 initTopbarDynamics();
 initCtaDynamics();
