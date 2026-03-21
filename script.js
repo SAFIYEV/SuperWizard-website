@@ -47,7 +47,6 @@ const i18n = {
     nav_demos: 'Demos',
     nav_engine: 'Engine',
     nav_scenarios: 'Scenarios',
-    nav_about: 'About',
     nav_founder: 'Founder',
     nav_launch: 'Launch',
     nav_menu: 'Menu',
@@ -93,10 +92,6 @@ const i18n = {
     demo_desc_2: 'Multi-step flows: the agent fills in what&apos;s missing and drives the task to completion.',
     carousel_prev: 'Previous video',
     carousel_next: 'Next video',
-    about_eyebrow: 'Company',
-    about_title: 'About SuperWizard',
-    about_p1: 'SuperWizard is a product-led SaaS focused on browser-native AI automation: we ship the extension, own the roadmap, and iterate directly with early users rather than acting as a services agency.',
-    about_p3: 'Contact, security questions, and partnership inquiries are handled through the channels listed in the footer; the public site at superwizard.org is the primary reference for product scope and company context.',
     cta_title: 'Ready to launch',
     cta_text: 'A founder-controlled platform: own your logic, quality, roadmap and iteration speed.',
     cta_btn_run: 'Launch SuperWizard',
@@ -113,7 +108,6 @@ const i18n = {
     nav_demos: 'Демо',
     nav_engine: 'Движок',
     nav_scenarios: 'Сценарии',
-    nav_about: 'О компании',
     nav_founder: 'Фаундер',
     nav_launch: 'Запуск',
     nav_menu: 'Меню',
@@ -159,10 +153,6 @@ const i18n = {
     demo_desc_2: 'Многошаговые сценарии: агент закрывает пробелы и доводит задачу до результата.',
     carousel_prev: 'Предыдущее видео',
     carousel_next: 'Следующее видео',
-    about_eyebrow: 'Компания',
-    about_title: 'О SuperWizard',
-    about_p1: 'SuperWizard — product-led SaaS вокруг AI-автоматизации в браузере: мы ведём расширение, роадмап и итерации с ранними пользователями, а не работаем как агентство услуг.',
-    about_p3: 'Контакты, вопросы безопасности и партнёрства — через каналы в подвале сайта; публичный superwizard.org — основная точка правды по продукту и контексту компании.',
     cta_title: 'Готов к запуску',
     cta_text: 'Платформа под контролем фаундера: своя логика, качество, роадмап и скорость итераций.',
     cta_btn_run: 'Запустить SuperWizard',
@@ -179,7 +169,6 @@ const i18n = {
     nav_demos: '演示',
     nav_engine: '引擎',
     nav_scenarios: '场景',
-    nav_about: '关于',
     nav_founder: '创始人',
     nav_launch: '启动',
     nav_menu: '菜单',
@@ -225,10 +214,6 @@ const i18n = {
     demo_desc_2: '多步流程：智能体补全缺失环节，将任务推进到完成。',
     carousel_prev: '上一个视频',
     carousel_next: '下一个视频',
-    about_eyebrow: '公司',
-    about_title: '关于 SuperWizard',
-    about_p1: 'SuperWizard 是以浏览器原生 AI 自动化为核心的产品型 SaaS：我们交付扩展、掌握路线图，并与早期用户直接迭代，而非作为外包服务机构。',
-    about_p3: '联系、安全与商务合作请通过页脚渠道；superwizard.org 是产品与公司的主要公开信息来源。',
     cta_title: '准备启动',
     cta_text: '由创始人掌控的平台：逻辑、质量、路线图与迭代速度都可控。',
     cta_btn_run: '启动 SuperWizard',
@@ -327,7 +312,7 @@ function initReveal() {
     });
   }, { threshold: 0.14 });
 
-  document.querySelectorAll('.section-title, .card, .stage, .hero .content, .hero-ui, .cta .content, .kpi, .founder-photo, .founder-card, .tab, .video-carousel, .carousel-viewport, .carousel-desc-wrap, .about-card, .about-deco')
+  document.querySelectorAll('.section-title, .card, .stage, .hero .content, .hero-ui, .cta .content, .kpi, .founder-photo, .founder-card, .tab, .video-carousel, .carousel-viewport, .carousel-desc-wrap')
     .forEach((el) => {
       el.classList.add('reveal');
       observer.observe(el);

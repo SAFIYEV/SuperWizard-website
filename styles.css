@@ -396,8 +396,7 @@ main { position: relative; z-index: 2; }
 .story h3 { margin: 0 0 10px; font-size: clamp(24px, 3vw, 38px); }
 .story p { color: var(--muted); font-size: 18px; line-height: 1.6; max-width: 760px; }
 
-.demos .section-title,
-.about .section-title {
+.demos .section-title {
   margin-bottom: 8px;
 }
 
@@ -516,61 +515,6 @@ main { position: relative; z-index: 2; }
   line-height: 1.65;
 }
 .carousel-desc.active { display: block; }
-
-.about-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 36px 28px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-.about-deco {
-  flex: 0 1 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 200px;
-  pointer-events: none;
-  user-select: none;
-}
-.about-deco-svg {
-  width: min(100%, 320px);
-  height: auto;
-  opacity: 0.92;
-}
-.about-deco .about-node {
-  animation: aboutPulse 3.2s ease-in-out infinite;
-}
-.about-deco .about-node-d {
-  animation-delay: 0.6s;
-}
-@keyframes aboutPulse {
-  0%, 100% { opacity: 0.75; }
-  50% { opacity: 1; }
-}
-
-.about-card {
-  flex: 1 1 420px;
-  max-width: 720px;
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  background: rgba(10, 15, 24, 0.82);
-  padding: 26px 28px;
-}
-.about-card p {
-  margin: 0 0 14px;
-  color: var(--muted);
-  font-size: clamp(15px, 1.7vw, 18px);
-  line-height: 1.65;
-}
-.about-card p:last-of-type { margin-bottom: 0; }
-.about-subtitle {
-  margin: 22px 0 10px;
-  font-size: clamp(18px, 2vw, 22px);
-}
-.about-card .muted { margin-top: 0; }
 
 .founder-wrap {
   display: grid;
@@ -954,18 +898,6 @@ main { position: relative; z-index: 2; }
   }
   .footer-social a { width: 100%; justify-content: center; }
   .footer-contact { width: min(620px, 100%); }
-  .about-wrap {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .about-deco {
-    order: -1;
-    flex-basis: auto;
-    min-height: 160px;
-  }
-  .about-card {
-    max-width: none;
-  }
 }
 
 @media (max-width: 640px) {
@@ -1042,9 +974,6 @@ main { position: relative; z-index: 2; }
 @media (prefers-reduced-motion: reduce) {
   .nav-toggle-bar {
     transition: none !important;
-  }
-  .about-deco .about-node {
-    animation: none !important;
   }
   .carousel-track {
     transition: none !important;
