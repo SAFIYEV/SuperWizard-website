@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+SC:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=8">
 </head>
 <body>
   <div class="noise"></div>
@@ -29,6 +29,7 @@
       <a href="#engine" data-i18n="nav_engine">Engine</a>
       <a href="#scenes" data-i18n="nav_scenarios">Scenarios</a>
       <a href="#founder" data-i18n="nav_founder">Founder</a>
+      <a href="#project-story" data-i18n="nav_story">Story</a>
       <a href="#cta" data-i18n="nav_launch">Launch</a>
     </nav>
 
@@ -190,24 +191,56 @@
     <section class="scene founder" id="founder">
       <div class="section-title">
         <p data-i18n="founder_eyebrow">Founder</p>
-        <h2 class="animated-headline" data-i18n="founder_title">Built by Safiev Marat</h2>
+        <h2 class="animated-headline" data-i18n="founder_title">Marat Safiyev</h2>
       </div>
       <div class="founder-wrap">
         <div class="founder-photo tilt">
-          <img src="./photo.png" alt="Safiev Marat">
+          <img src="./photo.png" alt="Marat Safiyev">
         </div>
         <article class="founder-card">
-          <h3 data-i18n="founder_name">Safiev Marat — Founder</h3>
-          <p data-i18n="founder_text_1">
-            Founder of AI Lumiere. Building practical AI products with strong execution focus.
+          <h3 data-i18n="founder_name">Marat Safiyev — Founder &amp; Full-stack Developer</h3>
+          <p data-i18n="founder_bio_intro">
+            My name is Marat Safiyev. I am Lezgin, a full-stack developer and founder based in Azerbaijan, with deep expertise
+            in Artificial Intelligence, Web3, and Game Development. At 16, I have already led cross-functional teams and
+            successfully delivered a series of technically complex projects from concept to launch.
           </p>
-          <p data-i18n="founder_text_2">
-            Leader of Web3 community: Web3 Frens CA.
+          <h4 data-i18n="founder_core_title">Core experience</h4>
+          <ul class="founder-list">
+            <li data-i18n="founder_exp_ai">
+              <strong>AI &amp; Automation (AI Lumiere):</strong> As Founder &amp; CEO, I spearhead the development of
+              SuperWizard, an autonomous AI agent designed for web task automation. I have extensive experience building
+              complex LLM-powered Telegram bots and integrating modern stacks (React, Python/Django, Tailwind CSS).
+            </li>
+            <li data-i18n="founder_exp_web3">
+              <strong>Web3 &amp; Community (Web3 Frens CA):</strong> Lead of a regional Web3 hub. I have organized industry
+              meetups, authored educational content with a cumulative reach of 25,000+ readers, and coordinated the
+              development of hybrid products at the intersection of blockchain and AI.
+            </li>
+            <li data-i18n="founder_exp_games">
+              <strong>Game Development (MATRIXON STD &amp; Soko Inu):</strong> Founded a studio that launched 6 gaming
+              titles on Yandex Games, reaching a combined audience of over 75,000 active players. As Game Director at Soko
+              Inu, I orchestrated the Web3 strategy for &quot;Rise to Riches,&quot; focusing on tokenomics and smart contract
+              integration.
+            </li>
+          </ul>
+          <p class="founder-hackathons" data-i18n="founder_hackathons">
+            <strong>Hackathons:</strong> Participant in 12+ international competitions, including high-profile events like
+            the Google Gemini and Cursor Hackathons.
           </p>
-          <p data-i18n="founder_text_3">
-            Drives product strategy and engineering direction for SuperWizard: browser automation, reliable agent loops,
-            and shipping customer-facing AI features through AI Lumiere.
-          </p>
+          <h4 data-i18n="founder_tech_title">Technical expertise</h4>
+          <ul class="founder-list founder-list--tech">
+            <li data-i18n="founder_tech_langs">
+              <strong>Languages:</strong> JavaScript, TypeScript, Python, C++, C#.
+            </li>
+            <li data-i18n="founder_tech_stack">
+              <strong>Technologies:</strong> React, HTML5 &amp; CSS3, Tailwind CSS, Django, Unity, game development &amp;
+              design, Web3/Blockchain infrastructure (TON, Solana), AI integration.
+            </li>
+            <li data-i18n="founder_tech_soft">
+              <strong>Soft skills:</strong> End-to-end product management, hackathon team leadership, strategic planning,
+              community management, and public speaking.
+            </li>
+          </ul>
           <div class="founder-tags">
             <span>AI Lumiere</span>
             <span>Web3 Frens CA</span>
@@ -237,6 +270,30 @@
           </div>
         </article>
       </div>
+    </section>
+
+    <section class="scene project-story" id="project-story">
+      <div class="section-title">
+        <p data-i18n="project_eyebrow">Behind the product</p>
+        <h2 class="animated-headline" data-i18n="project_story_title">Project story</h2>
+      </div>
+      <article class="project-story-card">
+        <p data-i18n="project_story_text_1">
+          The project was born during the January Gemini Hackathon when we ran out of time to edit our pitch video due to
+          manual, routine tasks.
+        </p>
+        <p data-i18n="project_story_text_2">
+          This struggle sparked the idea for a Gemini-powered browser extension designed to automate the boring stuff and
+          save people&apos;s time.
+        </p>
+        <p data-i18n="project_story_text_3">
+          Currently, it is an open-source product that I am building and refining independently. I am using this stage to
+          test various hypotheses and features to see what works best for users.
+        </p>
+        <p data-i18n="project_story_text_4">
+          While it&apos;s not an official company yet, the long-term plan is to monetize the platform as it evolves.
+        </p>
+      </article>
     </section>
 
     <section class="scene cta" id="cta">
@@ -314,6 +371,6 @@
     </p>
   </footer>
 
-  <script src="./script.js"></script>
+  <script src="./script.js?v=8"></script>
 </body>
 </html>
