@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#07090f">
+  <title>SuperWizard — AI products &amp; community</title>
+  <link rel="icon" type="image/jpeg" href="./image.jpg">
+  <link rel="apple-touch-icon" href="./image.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+SC:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css?v=21">
+</head>
+<body>
+  <div class="bg-stack" aria-hidden="true">
+    <div class="bg-aurora bg-aurora--a"></div>
+    <div class="bg-aurora bg-aurora--b"></div>
+    <div class="bg-beams"></div>
+    <span class="bg-orb bg-orb--1"></span>
+    <span class="bg-orb bg-orb--2"></span>
+    <span class="bg-orb bg-orb--3"></span>
+  </div>
+  <div class="noise"></div>
+  <canvas id="particles"></canvas>
+  <div class="scroll-progress" id="progress"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <img src="./image.jpg" alt="SuperWizard logo" class="brand-logo">
+      <span>SuperWizard</span>
+    </div>
+
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <a href="#hero" data-i18n="nav_home">Home</a>
+      <a href="#focus" data-i18n="nav_focus">Focus</a>
+      <a href="#founder" data-i18n="nav_founder">Founder</a>
+      <a href="#our-projects" data-i18n="nav_projects">Projects</a>
+      <a href="#cta" data-i18n="nav_contact">Contact</a>
+    </nav>
+
+    <div class="topbar-actions">
+      <div class="lang-switch">
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="ru">RU</button>
+        <button type="button" class="lang-btn" data-lang="zh">中文</button>
+      </div>
+      <button type="button" class="glow-btn topbar-cta" data-scroll="#cta" data-i18n="btn_contact">Get in touch</button>
+    </div>
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+    </button>
+  </header>
+  <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+
+  <main>
+    <section class="scene hero" id="hero">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+      <div class="content">
+        <p class="eyebrow" data-i18n="hero_eyebrow">AI studio</p>
+        <h1 data-i18n="hero_title">SuperWizard builds AI products,<br>shows up at hackathons, runs AI events</h1>
+        <p class="lead" data-i18n="hero_lead">
+          We ship practical AI work, compete and collaborate at hackathons, and host meetups and formats where people learn and build with AI together.
+        </p>
+        <div class="headline-rotator">
+          <span class="rotator-word active" data-i18n="rotator_1">Build</span>
+          <span class="rotator-dot">•</span>
+          <span class="rotator-word" data-i18n="rotator_2">Ship</span>
+          <span class="rotator-dot">•</span>
+          <span class="rotator-word" data-i18n="rotator_3">Gather</span>
+        </div>
+        <div class="cta-row">
+          <button class="glow-btn" data-scroll="#focus" data-i18n="btn_focus">What we do</button>
+          <button class="ghost-btn" data-scroll="#our-projects" data-i18n="btn_projects">Our projects</button>
+        </div>
+      </div>
+      <div class="hero-ui">
+        <div class="hero-ui-stack tilt">
+          <div class="panel hero-terminal-panel">
+            <div class="panel-head"><span></span><span></span><span></span></div>
+            <div class="terminal" id="terminal" aria-live="polite"></div>
+          </div>
+          <div class="mini-kpis hero-mini-kpis">
+            <div class="kpi"><p data-i18n="kpi_1_l">AI products</p><h4 data-i18n="kpi_1_r">2</h4></div>
+            <div class="kpi"><p data-i18n="kpi_2_l">Hackathons</p><h4 data-i18n="kpi_2_r">4</h4></div>
+            <div class="kpi"><p data-i18n="kpi_3_l">AI events</p><h4 data-i18n="kpi_3_r">Soon</h4></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene focus scene-compact" id="focus">
+      <div class="section-title">
+        <p data-i18n="focus_eyebrow">What we do</p>
+        <h2 class="animated-headline" data-i18n="focus_title">Three ways SuperWizard shows up</h2>
+      </div>
+      <div class="engine-grid">
+        <article class="card tilt">
+          <h3 data-i18n="focus_card_1_t">AI products</h3>
+          <p data-i18n="focus_card_1_p">Design and delivery of AI-powered tools and experiences — from ideas to something people can use.</p>
+        </article>
+        <article class="card tilt">
+          <h3 data-i18n="focus_card_2_t">Hackathons</h3>
+          <p data-i18n="focus_card_2_p">We take part in hackathons, prototype fast, and work side by side with other builders.</p>
+        </article>
+        <article class="card tilt">
+          <h3 data-i18n="focus_card_3_t">AI events</h3>
+          <p data-i18n="focus_card_3_p">Talks, meetups, and community formats focused on AI — learning, networking, and hands-on building.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="scene founder scene-compact" id="founder">
+      <div class="section-title founder-section-head">
+        <p data-i18n="founder_eyebrow">Founder</p>
+        <h2 class="animated-headline" data-i18n="founder_title">Marat Safiyev</h2>
+      </div>
+      <div class="founder-shell">
+        <div class="founder-wrap">
+          <div class="founder-photo-wrap">
+            <div class="founder-photo tilt">
+              <img src="./photo.png" alt="Marat Safiyev">
+            </div>
+          </div>
+          <article class="founder-card">
+            <h3 data-i18n="founder_name">Marat Safiyev — Founder</h3>
+            <p class="founder-bio" data-i18n="founder_bio">
+              Founder of SuperWizard. 16 years old. Co-founder of Web3 Frens Central Asia — Web3 &amp; AI media for the region.
+            </p>
+            <div class="founder-social">
+            <a href="https://www.linkedin.com/in/marat-safiyev-0a8392383/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="https://x.com/SafiyevMarat" target="_blank" rel="noopener noreferrer" aria-label="X (ex Twitter)" title="X (ex Twitter)">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18.9 2h3.4l-7.4 8.4L23.6 22h-6.8l-5.3-6.9L5.3 22H1.9l7.9-9L1.4 2h6.9l4.8 6.3L18.9 2zm-1.2 18h1.9L7.2 3.9H5.2L17.7 20z"/>
+              </svg>
+            </a>
+            <a href="https://instagram.com/maratsafiyev19/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.8A5.2 5.2 0 1 1 6.8 13 5.2 5.2 0 0 1 12 7.8zm0 2A3.2 3.2 0 1 0 15.2 13 3.2 3.2 0 0 0 12 9.8zM18 6.3a1.2 1.2 0 1 1-1.2 1.2A1.2 1.2 0 0 1 18 6.3z"/>
+              </svg>
+            </a>
+            <a href="https://t.me/SafiyevToday" target="_blank" rel="noopener noreferrer" aria-label="Telegram channel" title="Telegram channel">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21.5 4.6a1 1 0 0 0-1.1-.1L2.8 11.3a1 1 0 0 0 .1 1.9l4.5 1.5 1.7 5.3a1 1 0 0 0 1.8.3l2.5-3.4 4.2 3.1a1 1 0 0 0 1.6-.6l2.5-13.8a1 1 0 0 0-.2-1zM9.3 14.2l8.5-6.7-6.9 8.2-.8 2.5-.8-3.1z"/>
+              </svg>
+            </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene our-projects scene-compact" id="our-projects">
+      <div class="section-title">
+        <p data-i18n="projects_eyebrow">Portfolio</p>
+        <h2 class="animated-headline" data-i18n="projects_title">Our Projects</h2>
+      </div>
+      <div class="our-projects-inner">
+        <a href="colearn.html" class="project-tile tilt project-tile--link">
+          <span class="project-tile__title" data-i18n="project_colearn_name">CoLearn</span>
+          <span class="project-tile__subtitle" data-i18n="project_colearn_tag">EdTech</span>
+        </a>
+        <article class="project-tile tilt">
+          <span class="project-tile__title" data-i18n="project_stonewizard_name">StoneWizard</span>
+          <span class="project-tile__subtitle" data-i18n="project_stonewizard_tag">LegalTech</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="scene cta" id="cta">
+      <div class="ring"></div>
+      <div class="content">
+        <div class="cta-scan" aria-hidden="true"></div>
+        <p class="eyebrow">SuperWizard</p>
+        <h2 class="animated-headline" data-i18n="cta_title">Let&apos;s work together</h2>
+        <p class="lead" data-i18n="cta_text">
+          Reach out for partnerships, event ideas, or AI product conversations.
+        </p>
+        <div class="cta-row">
+          <a class="glow-btn pulse" href="mailto:admin@superwizard.org" data-i18n="cta_btn_mail">Email us</a>
+          <button class="ghost-btn" data-scroll="#hero" data-i18n="cta_btn_top">Back to top</button>
+        </div>
+        <p class="support-line" data-i18n="support_line">
+          SuperWizard — AI products, hackathons, and community.
+        </p>
+        <div class="cta-stats">
+          <article class="cta-stat" style="--delay: 0ms;">
+            <p data-i18n="cta_stat_1">AI products</p>
+            <h4 data-count="2">0</h4>
+          </article>
+          <article class="cta-stat" style="--delay: 120ms;">
+            <p data-i18n="cta_stat_2">Hackathons</p>
+            <h4 data-count="4">0</h4>
+          </article>
+          <article class="cta-stat cta-stat--plain" style="--delay: 240ms;">
+            <p data-i18n="cta_stat_3">AI events</p>
+            <h4 class="cta-stat-soon" data-i18n="cta_stat_soon">Soon</h4>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="./image.jpg" alt="SuperWizard logo" class="footer-logo">
+        <div>
+          <p class="footer-title">SuperWizard</p>
+          <p class="footer-subtitle" data-i18n="footer_subtitle">Follow SuperWizard on social media</p>
+        </div>
+      </div>
+      <div class="footer-social" aria-label="SuperWizard social links">
+        <a href="https://t.me/superwizard_ai" target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21.5 4.6a1 1 0 0 0-1.1-.1L2.8 11.3a1 1 0 0 0 .1 1.9l4.5 1.5 1.7 5.3a1 1 0 0 0 1.8.3l2.5-3.4 4.2 3.1a1 1 0 0 0 1.6-.6l2.5-13.8a1 1 0 0 0-.2-1zM9.3 14.2l8.5-6.7-6.9 8.2-.8 2.5-.8-3.1z"/>
+          </svg>
+          <span>Telegram</span>
+        </a>
+        <a href="https://x.com/superwizard_ai" target="_blank" rel="noopener noreferrer" aria-label="X" title="X">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18.9 2h3.4l-7.4 8.4L23.6 22h-6.8l-5.3-6.9L5.3 22H1.9l7.9-9L1.4 2h6.9l4.8 6.3L18.9 2zm-1.2 18h1.9L7.2 3.9H5.2L17.7 20z"/>
+          </svg>
+          <span>X</span>
+        </a>
+        <a href="https://www.instagram.com/super.wizard19/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.8A5.2 5.2 0 1 1 6.8 13 5.2 5.2 0 0 1 12 7.8zm0 2A3.2 3.2 0 1 0 15.2 13 3.2 3.2 0 0 0 12 9.8zM18 6.3a1.2 1.2 0 1 1-1.2 1.2A1.2 1.2 0 0 1 18 6.3z"/>
+          </svg>
+          <span>Instagram</span>
+        </a>
+      </div>
+    </div>
+    <p class="footer-contact" data-i18n="footer_contact">
+      For questions, email us at <a href="mailto:admin@superwizard.org">admin@superwizard.org</a>
+    </p>
+  </footer>
+
+  <script src="./script.js?v=20"></script>
+</body>
+</html>
